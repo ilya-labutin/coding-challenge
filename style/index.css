@@ -1,0 +1,27 @@
+/* ensure all pages have Bootstrap CSS */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.root {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  max-width: 800px;
+  padding-top: 2rem;
+}
+
+.text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.actions-column {
+  width: 100px;
+}
+
+.report-date {
+  font-size: 13px;
+  color: gray;
+}

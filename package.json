@@ -1,0 +1,25 @@
+{
+  "name": "with-react-bootstrap",
+  "version": "0.1.0",
+  "author": "Wenzhi Li",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "provision": "node scripts/provision.js"
+  },
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "chalk": "^4.1.0",
+    "dotenv": "^8.2.0",
+    "immer": "^7.0.1",
+    "isomorphic-unfetch": "^3.0.0",
+    "mongoose": "^5.9.18",
+    "next": "latest",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.0.1",
+    "react-dom": "^16.13.1",
+    "swr": "^0.2.3"
+  }
+}
