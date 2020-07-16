@@ -1,3 +1,5 @@
+![coding-challenge-ci Actions Status](https://github.com/ilya-labutin/coding-challenge/workflows/coding-challenge-ci/badge.svg)
+
 # coding-challenge
 
 Problem description is here: https://github.com/morkro/coding-challenge

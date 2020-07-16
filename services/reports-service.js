@@ -4,7 +4,7 @@ import Report from 'models/Report';
 export async function updateReport(id, state) {
   await connect();
 
-  return await Report.findByIdAndUpdate(
+  return Report.findByIdAndUpdate(
     id,
     {state},
     {
@@ -17,7 +17,7 @@ export async function updateReport(id, state) {
 export async function getReports(pageSize, pageNumber) {
   await connect();
 
-  return await Report.find({
+  return Report.find({
     state: {$ne: 'CLOSED'},
   })
     .skip((pageNumber - 1) * pageSize)
@@ -27,7 +27,7 @@ export async function getReports(pageSize, pageNumber) {
 export async function getReportsCount() {
   await connect();
 
-  return await Report.countDocuments({
+  return Report.countDocuments({
     state: {$ne: 'CLOSED'},
   });
 }

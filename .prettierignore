@@ -1,0 +1,11 @@
+node_modules
+cypress/plugins
+cypress/support
+cypress/videos
+cypress/fixtures
+coverage
+style
+public
+**/.next/**
+**/_next/**
+**/dist/**
