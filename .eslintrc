@@ -2,11 +2,11 @@
     "root": true,
     "parser": "babel-eslint",
     "extends": [
-        // "eslint:recommended",
-        // "plugin:react/recommended",
-        // "plugin:import/errors",
-        // "plugin:import/warnings",
-        // "plugin:jsx-a11y/recommended",
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:jsx-a11y/recommended",
         "plugin:react-hooks/recommended",
         "airbnb",
         "prettier"
@@ -15,7 +15,7 @@
         "browser": true,
         "commonjs": true,
         "es6": true,
-        "node": false
+        "node": true
     },
     "parserOptions": {
         "allowImportExportEverywhere": true,
@@ -35,7 +35,32 @@
         }
     },
     "plugins": [
-        "prettier"
+        "prettier",
+        "react",
+        "react-hooks",
+        "jest"
+    ],
+    "overrides": [
+        {
+            "files": [
+                "test/**/*.test.js"
+            ],
+            "extends": [
+                "plugin:jest/recommended"
+            ],
+            "rules": {
+                "jest/expect-expect": "off",
+                "jest/no-disabled-tests": "off"
+            }
+        },
+        {
+            "files": [
+                "**/__tests__/**"
+            ],
+            "env": {
+                "jest": true
+            }
+        }
     ],
     "rules": {
         "no-shadow": "off",
@@ -44,6 +69,13 @@
         "react/jsx-filename-extension": "off",
         "react/jsx-indent": "off",
         "react/jsx-indent-props": "off",
-        "react-hooks/rules-of-hooks": "error"
+        "react/jsx-props-no-spreading": "off",
+        "react-hooks/rules-of-hooks": "error",
+        "react/react-in-jsx-scope": "off",
+        "jsx-a11y/anchor-is-valid": "off",
+        "import/no-unresolved": "off",
+        "radix": ["error", "as-needed"],
+        "no-param-reassign": "off",
+        "no-underscore-dangle": "off"
     }
 }

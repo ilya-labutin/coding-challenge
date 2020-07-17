@@ -1,9 +1,10 @@
 import {Row, Card, Button, Col, Badge} from 'react-bootstrap';
 import Link from 'next/link';
+import PropTypes from 'prop-types';
 
-export default ({id, state, created, payload, isUpdating, onUpdateState}) => {
-  const isSpam = payload.reportType == 'SPAM';
-  const isOpen = state == 'OPEN';
+const ReportItem = ({id, state, created, payload, isUpdating, onUpdateState}) => {
+  const isSpam = payload.reportType === 'SPAM';
+  const isOpen = state === 'OPEN';
   return (
     <Card border={isUpdating ? 'secondary' : 'dark'} className="mb-2">
       <Card.Body className="p-2">
@@ -60,3 +61,14 @@ export default ({id, state, created, payload, isUpdating, onUpdateState}) => {
     </Card>
   );
 };
+
+ReportItem.propTypes = {
+  id: PropTypes.string.isRequired,
+  state: PropTypes.string.isRequired,
+  created: PropTypes.string.isRequired,
+  payload: PropTypes.object.isRequired,
+  isUpdating: PropTypes.bool.isRequired,
+  onUpdateState: PropTypes.func.isRequired,
+};
+
+export default ReportItem;

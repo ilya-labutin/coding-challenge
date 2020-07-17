@@ -13,8 +13,6 @@ module.exports = async function connect() {
     return;
   }
 
-  console.info({host, port, dbName});
-
   const db = await mongoose.connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,

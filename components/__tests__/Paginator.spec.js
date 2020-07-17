@@ -1,12 +1,12 @@
 import React from 'react';
-import {render, screen, fireEvent} from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Paginator from '../Paginator';
 
 const page = 3;
 const totalPages = 23;
 const visiblePages = 5;
-var onPageChange;
+let onPageChange;
 
 beforeEach(() => {
   onPageChange = jest.fn();
@@ -29,7 +29,7 @@ describe('Paginator', () => {
     expect(getByText('Next')).toBeInTheDocument();
     expect(getByText('Last')).toBeInTheDocument();
 
-    for (var i = 1; i <= visiblePages - 1; ++i) {
+    for (let i = 1; i <= visiblePages - 1; i += 1) {
       expect(getByText(`${i}`)).toBeInTheDocument();
     }
   });

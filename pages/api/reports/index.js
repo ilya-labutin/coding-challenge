@@ -1,11 +1,12 @@
 import {getReports, getReportsCount} from 'services/reports-service';
+import logger from 'utils/logger';
 
 export default async (req, res) => {
   const {method} = req;
   const {pageSize, pageNumber} = req.query;
 
   try {
-    if (method == 'GET') {
+    if (method === 'GET') {
       const reports = await getReports(
         Number.parseInt(pageSize),
         Number.parseInt(pageNumber)
@@ -18,7 +19,7 @@ export default async (req, res) => {
       });
     }
   } catch (error) {
-    console.error(error);
+    logger.error(error);
     return res.status(400).send({success: false});
   }
 

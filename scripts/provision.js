@@ -1,19 +1,23 @@
+/* eslint-disable no-console */
+/* eslint-disable no-await-in-loop */
+/* eslint-disable no-restricted-syntax */
 require('dotenv').config();
 const chalk = require('chalk');
 const connect = require('../utils/connection');
 const Report = require('../models/Report');
-const reportsData = require('../scripts/reports.json');
+const reportsData = require('./reports.json');
 
 const run = async () => {
   await connect();
 
   try {
     await Report.collection.drop();
+    // eslint-disable-next-line no-empty
   } catch {}
 
   await Report.createCollection();
 
-  for (var e of reportsData.elements) {
+  for (const e of reportsData.elements) {
     await Report.create({...e, created: Date.parse(e.created)});
   }
 };

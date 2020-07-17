@@ -1,10 +1,11 @@
 import {Pagination} from 'react-bootstrap';
+import PropTypes from 'prop-types';
 
-export default ({page, totalPages, visiblePages, onPageChange}) => {
+const Paginator = ({page, totalPages, visiblePages, onPageChange}) => {
   const floor = Math.floor((page - 1) / visiblePages);
   const firstPageIndex = visiblePages * floor + 1;
   const lastPageIndex = Math.min(firstPageIndex + visiblePages - 1, totalPages);
-  var items = Array.from(
+  const items = Array.from(
     {length: lastPageIndex - firstPageIndex + 1},
     (x, i) => i + firstPageIndex
   );
@@ -37,3 +38,12 @@ export default ({page, totalPages, visiblePages, onPageChange}) => {
     </Pagination>
   );
 };
+
+Paginator.propTypes = {
+  page: PropTypes.number.isRequired,
+  totalPages: PropTypes.number.isRequired,
+  visiblePages: PropTypes.number.isRequired,
+  onPageChange: PropTypes.func.isRequired,
+};
+
+export default Paginator;

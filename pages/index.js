@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 import produce from 'immer';
 import fetch from 'libs/fetch';
 import useSWR from 'swr';
@@ -47,7 +47,7 @@ export default () => {
       false
     );
 
-    return await mutate(
+    return mutate(
       produce(async (draft) => {
         const {report} = await fetch(getReportsUpdatePath(id), {
           method: 'PUT',
