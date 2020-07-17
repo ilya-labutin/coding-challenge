@@ -8,7 +8,7 @@ export default ({page, totalPages, visiblePages, onPageChange}) => {
     {length: lastPageIndex - firstPageIndex + 1},
     (x, i) => i + firstPageIndex
   );
-  
+
   const hasNextPage = totalPages <= 1 || page === totalPages;
   return (
     <Pagination size="sm">

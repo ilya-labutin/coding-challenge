@@ -1,0 +1,8 @@
+node_modules
+cypress
+coverage
+style
+public
+**/.next/**
+**/_next/**
+**/dist/**

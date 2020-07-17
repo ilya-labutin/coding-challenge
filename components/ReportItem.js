@@ -5,7 +5,7 @@ export default ({id, state, created, payload, isUpdating, onUpdateState}) => {
   const isSpam = payload.reportType == 'SPAM';
   const isOpen = state == 'OPEN';
   return (
-    <Card border={isUpdating ? "secondary" : "dark"} className="mb-2">
+    <Card border={isUpdating ? 'secondary' : 'dark'} className="mb-2">
       <Card.Body className="p-2">
         <Col>
           <Row>

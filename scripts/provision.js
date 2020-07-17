@@ -10,9 +10,9 @@ const run = async () => {
   try {
     await Report.collection.drop();
   } catch {}
-  
+
   await Report.createCollection();
-  
+
   for (var e of reportsData.elements) {
     await Report.create({...e, created: Date.parse(e.created)});
   }

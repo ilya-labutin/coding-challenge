@@ -1,0 +1,49 @@
+{
+    "root": true,
+    "parser": "babel-eslint",
+    "extends": [
+        // "eslint:recommended",
+        // "plugin:react/recommended",
+        // "plugin:import/errors",
+        // "plugin:import/warnings",
+        // "plugin:jsx-a11y/recommended",
+        "plugin:react-hooks/recommended",
+        "airbnb",
+        "prettier"
+    ],
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "node": false
+    },
+    "parserOptions": {
+        "allowImportExportEverywhere": true,
+        "ecmaVersion": 2018,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true,
+            "experimentalObjectRestSpread": true
+        }
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        },
+        "import/resolver": {
+            "node": true
+        }
+    },
+    "plugins": [
+        "prettier"
+    ],
+    "rules": {
+        "no-shadow": "off",
+        "no-use-before-define": "off",
+        "react/forbid-prop-types": "off",
+        "react/jsx-filename-extension": "off",
+        "react/jsx-indent": "off",
+        "react/jsx-indent-props": "off",
+        "react-hooks/rules-of-hooks": "error"
+    }
+}

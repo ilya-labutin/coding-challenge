@@ -14,12 +14,12 @@ module.exports = async function connect() {
   }
 
   console.info({host, port, dbName});
-  
+
   const db = await mongoose.connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
-    dbName
+    dbName,
   });
 
   connection.isConnected = db.connections[0].readyState;
