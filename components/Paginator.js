@@ -1,7 +1,6 @@
 import {Pagination} from 'react-bootstrap';
 
-export default ({page, totalPages, onPageChange}) => {
-  const visiblePages = 5;
+export default ({page, totalPages, visiblePages, onPageChange}) => {
   const floor = Math.floor((page - 1) / visiblePages);
   const firstPageIndex = visiblePages * floor + 1;
   const lastPageIndex = Math.min(firstPageIndex + visiblePages - 1, totalPages);

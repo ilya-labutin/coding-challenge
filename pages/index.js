@@ -74,6 +74,7 @@ export default () => {
         <Paginator
           page={page}
           totalPages={totalPages}
+          visiblePages={defaultPageSize}
           onPageChange={handlePageChange}
         />
 

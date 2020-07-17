@@ -11,6 +11,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
+    "test:ci": "jest --ci",
     "cypress:open": "cypress open"
   },
   "dependencies": {
@@ -29,6 +30,7 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.1",
     "@testing-library/react": "^10.4.7",
+    "@testing-library/user-event": "^12.0.11",
     "babel-jest": "^26.1.0",
     "cypress": "^4.10.0",
     "jest": "^26.1.0",
