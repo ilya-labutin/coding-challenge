@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const logger = require('./logger');
 
 const connection = {};
 
@@ -8,6 +9,8 @@ const password = process.env.MONGO_PASSWORD;
 const host = process.env.MONGO_HOST;
 const dbName = process.env.MONGO_DB_NAME;
 const uri = `${prefix}://${user}:${password}@${host}?retryWrites=true&w=majority`;
+
+logger.debug({uri});
 
 module.exports = async function connect() {
   if (connection.isConnected) {
