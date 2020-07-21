@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "provision": "node scripts/provision.js",
+    "provision": "node -r dotenv/config scripts/provision.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
@@ -16,7 +16,8 @@
     "prettier:fix": "prettier --write \"**/*.{js,jsx,json}\"",
     "lint:eslint": "eslint . --ext js,jsx --max-warnings=0",
     "lint": "run-p prettier:check lint:eslint",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "dependencies": {
     "bootstrap": "^4.4.1",
@@ -53,6 +54,7 @@
     "jest": "^26.1.0",
     "node-fetch": "^2.6.0",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "wait-on": "^5.1.0"
   }
 }

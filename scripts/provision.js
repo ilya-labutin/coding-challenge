@@ -1,7 +1,6 @@
 /* eslint-disable no-console */
 /* eslint-disable no-await-in-loop */
 /* eslint-disable no-restricted-syntax */
-require('dotenv').config();
 const chalk = require('chalk');
 const connect = require('../utils/connection');
 const Report = require('../models/Report');

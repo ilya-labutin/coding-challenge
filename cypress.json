@@ -1,1 +1,6 @@
-{}
+{
+  "pageLoadTimeout": 30000,
+  "viewportWidth": 1280,
+  "viewportHeight": 800,
+  "projectId": "hkau6t"
+}
