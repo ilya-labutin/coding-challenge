@@ -9,6 +9,8 @@ const host = process.env.MONGO_HOST;
 const dbName = process.env.MONGO_DB_NAME;
 const uri = `${prefix}://${user}:${password}@${host}?retryWrites=true&w=majority`;
 
+console.log({uri});
+
 module.exports = async function connect() {
   if (connection.isConnected) {
     return;
@@ -20,6 +22,6 @@ module.exports = async function connect() {
     useFindAndModify: false,
     dbName,
   });
-
+  
   connection.isConnected = db.connections[0].readyState;
 };
