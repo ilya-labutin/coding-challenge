@@ -27,3 +27,8 @@ jobs:
     - run: npm install
     - run: npm run lint
     - run: npm run test:ci
+    - name: Run test stack
+      run: docker-compose up --build -d  
+    - name: Provision
+      run: npm run provision  
+    
