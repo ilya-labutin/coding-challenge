@@ -1,4 +1,4 @@
-https://github.com/ilya-labutin/coding-challenge/workflows/coding-challenge-ci/badge.svg
+![coding-challenge-ci Actions Status](https://github.com/ilya-labutin/coding-challenge/workflows/coding-challenge-ci/badge.svg)
 
 # coding-challenge
 
