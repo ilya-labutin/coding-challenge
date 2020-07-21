@@ -1,11 +1,11 @@
 {
-    "name": "coding-challenge",
-    "version": 2,
-    "env": {
-        "MONGO_PREFIX": "mongodb+srv",
-        "MONGO_USER": "coding-challenge-dbadmin",
-        "MONGO_PASSWORD": "D47DVdHWiHwr",
-        "MONGO_HOST": "coding-challenge-cluste.waxeo.mongodb.net",
-        "MONGO_DB_NAME": "coding-challenge"
-    }
+  "name": "coding-challenge",
+  "version": 2,
+  "env": {
+    "MONGO_PREFIX": "mongodb+srv",
+    "MONGO_USER": "coding-challenge-dbadmin",
+    "MONGO_PASSWORD": "D47DVdHWiHwr",
+    "MONGO_HOST": "coding-challenge-cluste.waxeo.mongodb.net",
+    "MONGO_DB_NAME": "coding-challenge"
+  }
 }

@@ -23,6 +23,6 @@ module.exports = async function connect() {
     useFindAndModify: false,
     dbName,
   });
-  
+
   connection.isConnected = db.connections[0].readyState;
 };
