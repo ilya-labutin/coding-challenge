@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start",
     "provision": "node -r dotenv/config scripts/provision.js",
+    "provision:prod": "node -r dotenv/config scripts/provision.js dotenv_config_path=.env.prod",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
