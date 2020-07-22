@@ -6,7 +6,7 @@ describe('coding-challenge e2e', () => {
   it('pager navigation', () => {
     cy.visit('/');
     cy.wait(1000);
-    
+
     cy.get(testid('Paginator-Link-Last')).click();
     cy.url().should('include', 'page=5');
 
