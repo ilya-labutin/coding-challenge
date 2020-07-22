@@ -1,5 +1,11 @@
 module.exports = {
-  collectCoverageFrom: ['**/*.{js,jsx,ts,tsx}', '!**/*.d.ts', '!**/node_modules/**'],
+  collectCoverageFrom: [
+    '**/components/*.{js,jsx,ts,tsx}',
+    '!**/*.d.ts',
+    '!**/node_modules/**',
+    '!**/.next/**',
+    '!**/cypress/**',
+  ],
   setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
   testPathIgnorePatterns: ['/node_modules/', '/.next/', '/cypress/'],
   transform: {
