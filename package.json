@@ -18,7 +18,7 @@
     "lint:eslint": "eslint . --ext js,jsx --max-warnings=0",
     "lint": "run-p prettier:check lint:eslint",
     "cypress:open": "./node_modules/.bin/cypress open",
-    "cypress:run-ci": "./node_modules/.bin/cypress run",
+    "cypress:run-ci": "./node_modules/.bin/cypress run --headless --browser chrome",
     "cypress:run": "./node_modules/.bin/cypress run --browser chrome"
   },
   "dependencies": {
