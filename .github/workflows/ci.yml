@@ -30,4 +30,9 @@ jobs:
     - run: npm install cypress
     - run: docker-compose build --build-arg NEXT_ENV=development
     - run: docker-compose up -d --no-build & node_modules/.bin/wait-on http://localhost:8181
-    - run: npm run cypress:run-ci    
+    - run: npm run cypress:run-ci   
+    - name: Archive cypress artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: cypress-videos
+          path: cypress/videos 
