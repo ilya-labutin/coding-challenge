@@ -7,7 +7,7 @@ const ReportItem = ({id, state, created, payload, isUpdating, onUpdateState}) =>
   const isOpen = state === 'OPEN';
   return (
     <Card border={isUpdating ? 'secondary' : 'dark'} className="mb-2">
-      <Card.Body className="p-2">
+      <Card.Body className="p-2" data-testid={`ReportItem-${id}`}>
         <Col>
           <Row>
             <Col md={10}>
@@ -40,6 +40,7 @@ const ReportItem = ({id, state, created, payload, isUpdating, onUpdateState}) =>
                   variant="outline-danger"
                   disabled={isUpdating || !isOpen}
                   onClick={() => onUpdateState('BLOCKED')}
+                  data-testid={`ReportItem-Block-${id}`}
                 >
                   Block
                 </Button>
@@ -50,6 +51,7 @@ const ReportItem = ({id, state, created, payload, isUpdating, onUpdateState}) =>
                   variant="outline-success"
                   disabled={isUpdating}
                   onClick={() => onUpdateState('CLOSED')}
+                  data-testid={`ReportItem-Resolve-${id}`}
                 >
                   Resolve
                 </Button>
@@ -62,12 +64,16 @@ const ReportItem = ({id, state, created, payload, isUpdating, onUpdateState}) =>
   );
 };
 
+ReportItem.defaultProps = {
+  isUpdating: false,
+};
+
 ReportItem.propTypes = {
   id: PropTypes.string.isRequired,
   state: PropTypes.string.isRequired,
   created: PropTypes.string.isRequired,
   payload: PropTypes.object.isRequired,
-  isUpdating: PropTypes.bool.isRequired,
+  isUpdating: PropTypes.bool,
   onUpdateState: PropTypes.func.isRequired,
 };
 
