@@ -1,5 +1,8 @@
 node_modules
-cypress
+cypress/plugins
+cypress/support
+cypress/videos
+cypress/fixtures
 coverage
 style
 public
