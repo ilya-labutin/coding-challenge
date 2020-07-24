@@ -72,7 +72,7 @@ npm run test:coverage
 
 ## End to end tests
 
-End to end tests covers main application use case: blocking and resolving spam reports, navigating throught the spam reports. Tests are implemented via all-in-one testing framework [`Cypress`](https://www.cypress.io/) and are executed in a headless Chrome as a part of CI/CD.
+End to end tests covers main application use case: blocking and resolving spam reports, navigating through the spam reports. Tests are implemented via all-in-one testing framework [`Cypress`](https://www.cypress.io/) and are executed in a headless Chrome as a part of CI/CD.
 
 In order to run tests locally install the Cypress library (it is not a part of project dependencies):
 
@@ -90,7 +90,7 @@ npm run cypress
 
 Configured CI/CD deploys application to the [`Vercel`](https://vercel.com/) cloud platform. It is a native cloud platform for the Next.js applications.
 
-Deployment link is the following: `https://coding-challenge.vercel.app/`
+Deployment link is the following: https://coding-challenge.vercel.app/
 
 Vercel deployment uses [`MongoDB Atlas`](https://www.mongodb.com/cloud/atlas) cloud service. In order to reset database state in the Vercel deployment execute:
 
