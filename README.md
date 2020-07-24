@@ -39,7 +39,7 @@ docker-compose restart app
 
 ## Static checks
 
-Project is configured with [`Prettier`](https://prettier.io) formatter and [`ESLint`](https://eslint.org/) linter. Both Prettier and ESLint are parts of the CI/CD implemented via [`GitHub Actions`](https://docs.github.com/en/actions).
+Project is configured with [`Prettier`](https://prettier.io) formatter and [`ESLint`](https://eslint.org/) linter. Both Prettier and ESLint are parts of the CI/CD implemented via [`GitHub Actions`](https://docs.github.com/en/actions). GitHub workflow conffiguration file is here: [ci.yml](.github/workflows/ci.yml)
 
 In order to check and fix code formatting locally install dependencies via `npm install` and execute the following:
 
