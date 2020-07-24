@@ -19,13 +19,17 @@
     "lint": "run-p prettier:check lint:eslint",
     "cypress:open": "./node_modules/.bin/cypress open",
     "cypress:run-ci": "./node_modules/.bin/cypress run --headless --browser chrome",
-    "cypress:run": "./node_modules/.bin/cypress run --browser chrome"
+    "cypress:run": "./node_modules/.bin/cypress run --browser chrome",
+    "cypress": "run-s compose:down compose:build compose:dev compose:wait cypress:run",
+    "compose:down": "docker-compose down",
+    "compose:build": "docker-compose build --build-arg NEXT_ENV=development",
+    "compose:dev": "docker-compose up -d --no-build",
+    "compose:wait": "node_modules/.bin/wait-on http://localhost:8181"
   },
   "dependencies": {
     "babel-plugin-react-remove-properties": "^0.3.0",
     "bootstrap": "^4.4.1",
     "chalk": "^4.1.0",
-    "cypress": "^4.11.0",
     "dotenv": "^8.2.0",
     "immer": "^7.0.1",
     "isomorphic-unfetch": "^3.0.0",
